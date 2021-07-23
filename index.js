@@ -2,11 +2,13 @@ import {getMergeType} from "leapond-js-utils";
 
 export default function deepCopy(target, depthMax = Infinity) {
   if (!target) return target
-  let args = arguments, typeTarget = args[2]
+  let args = arguments, typeTarget = args[2], depthCurrent = args[3] || 0, aLoops = args[4], dest, v
   if (!(typeTarget > -1)) typeTarget = getMergeType(target)
-  if (!typeTarget) return target
+  if (!typeTarget || depthCurrent >= depthMax) return target
 
-  let depthCurrent = args[3] || 0, aLoops = args[4], dest, v
+  depthCurrent++
+
+  aLoops = aLoops ? [...aLoops, target] : [target]
 
   switch (typeTarget) {
     case 1:
@@ -26,7 +28,7 @@ export default function deepCopy(target, depthMax = Infinity) {
     case 4:
       dest = new Map;
       [...target.entries()].forEach(v => {
-        dest.set(v[0], deepCopy(v, depthMax, -1, depthCurrent, aLoops))
+        dest.set(v[0], deepCopy(v[1], depthMax, -1, depthCurrent, aLoops))
       })
       return dest
   }
