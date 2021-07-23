@@ -1,0 +1,36 @@
+{
+  "name": "leapond-deepcopy",
+  "version": "1.0.0",
+  "description": "Object, Array, Set, Map supported deepcopy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leapond/js-deepcopy.git"
+  },
+  "keywords": [
+    "deepcopy",
+    "deep",
+    "copy",
+    "Object",
+    "Array",
+    "Set",
+    "Map",
+    "depth",
+    "limitation",
+    "max",
+    "depth",
+    "leapond"
+  ],
+  "author": "Leapond, Inc. (https://www.leapond.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leapond/js-deepcopy/issues"
+  },
+  "homepage": "https://github.com/leapond/js-deepcopy#readme",
+  "dependencies": {
+    "leapond-js-utils": "^1.0.2"
+  }
+}
