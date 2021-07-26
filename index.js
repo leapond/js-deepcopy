@@ -1,5 +1,11 @@
 import {getMergeType} from "leapond-js-utils";
 
+/**
+ * Object, Array, Set, Map supported deep copy.
+ * @param target
+ * @param {number} depthMax
+ * @return {Map<any, any>|Set<any>|*[]|*}
+ */
 export default function deepCopy(target, depthMax = Infinity) {
   if (!target) return target
   let args = arguments, typeTarget = args[2], depthCurrent = args[3] || 0, aLoops = args[4], dest, v

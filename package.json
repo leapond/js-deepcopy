@@ -1,6 +1,6 @@
 {
   "name": "leapond-deepcopy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Object, Array, Set, Map supported deepcopy.",
   "main": "index.js",
   "scripts": {
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/leapond/js-deepcopy#readme",
   "dependencies": {
-    "leapond-js-utils": "^1.0.2"
+    "leapond-js-utils": "^1.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
@@ -43,7 +43,7 @@
   },
   "jest": {
     "transformIgnorePatterns": [
-      "/node_modules\/(?!leapond)(.*)"
+      "/node_modules/(?!leapond)(.*)"
     ]
   }
 }

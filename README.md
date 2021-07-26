@@ -27,8 +27,9 @@ let target = {
   s: new Set([1, 2]),
   m: new Map([[1, 100]])
 }, result
+
 console.log(
-    result = deepCopy(target, 2),
+    result = deepCopy(target, 2/* depthMax */),
     result === target,        // false
     result.a,
     result.a === target.a,    // false
