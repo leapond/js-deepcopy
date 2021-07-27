@@ -11,7 +11,7 @@ export default {
   output: [
     {file: pkg.main, format: 'cjs', sourcemap: true, exports: 'auto'},
     {file: pkg.module, format: 'es', sourcemap: true},
-    {file: pkg.borwser, format: 'iife', sourcemap: true, name: 'deepCopy'}
+    {file: pkg.browser, format: 'iife', sourcemap: true, name: 'deepCopy'}
   ],
   plugins: [nodeResolve(), leapondReplace({LEAPOND: 1}), buble(), isDev && serve('dist') || null],
 }

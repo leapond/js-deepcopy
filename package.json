@@ -4,7 +4,7 @@
   "description": "Object, Array, Set, Map supported deepcopy.",
   "main": "dist/deep-copy-bundle.cjs.js",
   "module": "dist/deep-copy-bundle.es.js",
-  "borwser": "dist/deep-copy-bundle.iife.js",
+  "browser": "dist/deep-copy-bundle.iife.js",
   "scripts": {
     "build": "rollup -c --environment NODE_ENV:production",
     "dev": "rollup -wc",
