@@ -19,7 +19,10 @@ yarn add leapond-deepcopy
 ## Usage
 
 ```javascript
+// bundled
 import deepCopy from "leapond-deepcopy";
+// source (recommend)
+import deepCopy from "leapond-deepcopy/src";
 
 let target = {
   a: [1, 2, 3],

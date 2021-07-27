@@ -1,4 +1,4 @@
-import {getMergeType} from "leapond-js-utils";
+import {getMergeType} from "leapond-js-utils/src";
 
 /**
  * Object, Array, Set, Map supported deep copy.
