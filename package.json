@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/leapond/js-deepcopy#readme",
   "dependencies": {
-    "leapond-js-utils": "^1.0.3"
+    "leapond-js-utils": "^1.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",
