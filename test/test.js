@@ -1,4 +1,4 @@
-import deepCopy from "./index";
+import deepCopy from "../dist/deep-copy-bundle.es";
 
 const t = {a: 1, b: [2], s: new Set([10]), m: new Map([[1, {x: 100}]])}
 

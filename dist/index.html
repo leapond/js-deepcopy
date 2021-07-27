@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>utils</title>
+</head>
+<body>
+<h1>deepCopy test</h1>
+<p>view in console.</p>
+<!--Legacy-->
+<script src="./deep-copy-bundle.iife.js"></script>
+<script>
+  let a = {a: 1, b: {b: {b: 2}}},
+      // no depthMax limitation, copy all
+      c = deepCopy(a)
+  console.log('iife', a === c, a.b === c.b, a.b.b === c.b.b, a.b.b.b)
+  // with depthMax limitation
+  c = deepCopy(a, 1)
+  console.log('iife.with.depth.1', a === c, a.b === c.b, a.b.b === c.b.b, a.b.b.b)
+</script>
+
+<!--ESM-->
+<script type="module">
+  import deepCopy from "./deep-copy-bundle.es.js";
+
+  let a = {a: 1, b: {b: {b: 2}}},
+      // no depthMax limitation, copy all
+      c = deepCopy(a)
+  console.log('esm', a === c, a.b === c.b, a.b.b === c.b.b, a.b.b.b)
+  // with depthMax limitation
+  c = deepCopy(a, 2)
+  console.log('esm.with.depth.2', a === c, a.b === c.b, a.b.b === c.b.b, a.b.b.b)
+</script>
+</body>
+</html>
