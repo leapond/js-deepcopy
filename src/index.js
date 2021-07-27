@@ -3,7 +3,7 @@ import {getMergeType} from "leapond-js-utils";
 /**
  * Object, Array, Set, Map supported deep copy.
  * @param target
- * @param {number} depthMax
+ * @param {number} [depthMax]
  * @return {Map<any, any>|Set<any>|*[]|*}
  */
 export default function deepCopy(target, depthMax = Infinity) {
@@ -27,14 +27,14 @@ export default function deepCopy(target, depthMax = Infinity) {
       return dest
     case 3:
       dest = new Set;
-      [...target.values()].forEach(v => {
+      target.forEach(v => {
         dest.add(deepCopy(v, depthMax, -1, depthCurrent, aLoops))
-      });
+      })
       return dest
     case 4:
       dest = new Map;
-      [...target.entries()].forEach(v => {
-        dest.set(v[0], deepCopy(v[1], depthMax, -1, depthCurrent, aLoops))
+      target.forEach((v, k) => {
+        dest.set(k, deepCopy(v, depthMax, -1, depthCurrent, aLoops))
       })
       return dest
   }
