@@ -6,8 +6,6 @@ var mergeTypes = {'[object Object]': 1, '[object Array]': 2, '[object Set]': 3, 
 function getMergeType(target) {
   return target &&
       typeof target === 'object' &&
-      // make Leapond Classes not be copy/merged
-      !('CID' in target) &&
       mergeTypes[toStr.call(target)] ||
       0
 }
