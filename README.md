@@ -1,3 +1,7 @@
+# This project has been deprecated
+
+Moved to [@leapond/utilities](https://gitea.com/leapond/utilities)
+
 # js-deepcopy
 
 Object, Array, Set, Map supported deepcopy.
